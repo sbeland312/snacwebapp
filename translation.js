@@ -1,7 +1,4 @@
 
-// ==========================
-// WAIT FOR DOM
-// ==========================
 document.addEventListener("DOMContentLoaded", () => {
 
 // ==========================
@@ -16,7 +13,7 @@ const searchBtn = document.getElementById('search-btn');
 const refreshBtn = document.getElementById('refresh-btn');
 
 // ==========================
-// UI TRANSLATIONS (ONLY UI)
+// UI TRANSLATIONS
 // ==========================
 const translations = {
   en: {
@@ -63,7 +60,7 @@ if (langSwitcher) {
 }
 
 // ==========================
-// TRANSLATION FUNCTION
+// TRANSLATION
 // ==========================
 function translatePage(language) {
   currentLanguage = language;
@@ -72,11 +69,10 @@ function translatePage(language) {
   searchBtn.textContent = translations[language].searchBtn;
   refreshBtn.textContent = translations[language].refreshBtn;
 
-  // re-render content in new language
   displayData(apiData);
 }
 
-// initial language
+// initial render
 translatePage(currentLanguage);
 
 // ==========================
@@ -141,18 +137,38 @@ function filterData(query) {
 }
 
 // ==========================
+// 🔥 HELPER (MUST BE HERE)
+// ==========================
+function formatURL(url = '') {
+  url = url.trim();
+
+  if (!url) return '#';
+
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+
+  return 'https://' + url;
+}
+
+// ==========================
 // DISPLAY
 // ==========================
 function displayData(data) {
 
-  if (!display) return;
+  if (!display) {
+    console.error("Missing #display element");
+    return;
+  }
 
   display.innerHTML = data.map(obj => `
     <article class="item">
 
       <div class="item-header">
         <h2>
-          <a href="${obj.URL}" target="_blank" rel="noopener noreferrer">
+          <a href="https://snaccooperative.org/view/85524551#holding-repository"
+             target="_blank"
+             rel="noopener noreferrer">
             ${obj.SNAC_Holding_Repository || ''}
           </a>
         </h2>
@@ -166,7 +182,10 @@ function displayData(data) {
           <span class="inline-label">
             ${translations[currentLanguage].resourceTitle}:
           </span>
-          <a href="${obj.URL}" target="_blank" rel="noopener noreferrer">
+
+          <a href="${formatURL(obj.Resource_URL)}"
+             target="_blank"
+             rel="noopener noreferrer">
             ${obj.Resource_Title || ''}
           </a>
         </h3>
