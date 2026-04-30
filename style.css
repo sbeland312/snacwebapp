@@ -18,11 +18,11 @@ header {
     color: white;
     border-bottom: 10px solid var(--neutral);
     margin-bottom: 2rem;
-    text-align: center; /* THIS restores old behavior */
+    text-align: center;
 }
 
 .header-content {
-    max-width: 1000px; /* restore looser width */
+    max-width: 650px;
     margin: 0 auto;
     padding: 1rem 0.5rem;
 }
