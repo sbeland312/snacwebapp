@@ -5,52 +5,62 @@
     --gray: #EFEFEF;
     --neutral: #DCC8AC;
 }
+
 * {
     margin: 0;
     padding: 0;
     font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
+/* ONE shared layout system */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* HEADER */
 header {
-    text-align: center;
     background-color: var(--dark);
     color: white;
     border-bottom: 10px solid var(--neutral);
     margin-bottom: 2rem;
 }
 
-.header-content {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 1rem 0.5rem;
-}
-
-header .collection-blurb {
-    max-width: 580px;
-    margin: 0.5rem 0 1rem 0;
+/* BLURB */
+.collection-blurb {
     font-size: 0.95rem;
     line-height: 1.6;
     color: white;
     text-align: left;
-    display: block;
-    opacity: 0.95;
+    margin-bottom: 0.75rem;
 }
 
+/* TITLE */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* SEARCH */
+.search-bar {
+    margin: 1rem 0;
+}
+
+/* TRANSLATION */
 .translation {
     display: flex;
     gap: 20px;
-    justify-content: center;   /* or flex-start or flex-end */
+    justify-content: center;
     margin-top: 0.5rem;
-}
-
-h1 {
-    font-size: 2rem;
 }
 
 .translation a {
     color: white;
 }
 
+/* LINKS */
 a {
     color: var(--main);
 }
@@ -59,29 +69,12 @@ a:hover {
     color: var(--highlight);
 }
 
-.search-bar {
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-#input, #search-btn, #refresh-btn {
-    height: 2.5rem;
-    padding: 0 0.5rem; 
-    border: none;
-    font-size: 1rem; 
-    border-radius: 5px;
-}
-
-#search-btn:hover, #refresh-btn:hover {
-    cursor: pointer;
-    background-color: var(--highlight);
-}
-
+/* MAIN CONTENT */
 main {
-    padding: 0 0.5rem;
-    max-width: 700px;
-    margin: 0 auto;
+    margin-bottom: 2rem;
 }
+
+/* ITEMS */
 .item {
     margin-bottom: 2rem;
 }
@@ -100,12 +93,8 @@ main {
 }
 
 .item-description {
-    padding: 0.3rem 0 0 3rem;
+    padding: 0.3rem 0 0 1rem;
     font-size: 14px;
-}
-
-.item-description p {
-    padding-bottom: 5px;
 }
 
 .inline-label, .label {
