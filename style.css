@@ -25,14 +25,16 @@ header {
     padding: 1rem 0.5rem;
 }
 
+/* FIXED BLURB */
 header .collection-blurb {
-    max-width: 650px;
-    margin: 0.75rem 0 1rem 0;
-    font-size: 1rem;
+    max-width: 580px;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 0.95rem;
     line-height: 1.6;
     color: white;
     text-align: left;
     display: block;
+    opacity: 0.95;
 }
 
 .translation {
