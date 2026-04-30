@@ -20,10 +20,7 @@ header {
     margin-bottom: 2rem;
 }
 
-.header-content h1,
-.search-bar,
-.translation {
-    text-align: center;
+.header-content {
     max-width: 700px;
     margin: 0 auto;
     padding: 1rem 0.5rem;
@@ -52,8 +49,8 @@ h1 {
 
 .translation {
     display: flex;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
     margin-top: 0.5rem;
 }
 
