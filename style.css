@@ -13,7 +13,6 @@
     box-sizing: border-box;
 }
 
-/* HEADER */
 header {
     background-color: var(--dark);
     color: white;
@@ -21,14 +20,12 @@ header {
     margin-bottom: 2rem;
 }
 
-/* THIS IS THE KEY FIX — header and main now match exactly */
 .header-content {
     max-width: 700px;
     margin: 0 auto;
     padding: 1rem 0.5rem;
 }
 
-/* BLURB */
 .collection-blurb {
     font-size: 0.95rem;
     line-height: 1.6;
@@ -37,18 +34,15 @@ header {
     margin: 0 0 0.75rem 0;
 }
 
-/* TITLE */
 h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-/* SEARCH */
 .search-bar {
     margin: 1rem 0;
 }
 
-/* TRANSLATION */
 .translation {
     display: flex;
     gap: 20px;
@@ -60,7 +54,6 @@ h1 {
     color: white;
 }
 
-/* LINKS */
 a {
     color: var(--main);
 }
@@ -69,14 +62,12 @@ a:hover {
     color: var(--highlight);
 }
 
-/* MAIN CONTENT — MUST MATCH HEADER WIDTH */
 main {
     max-width: 700px;
     margin: 0 auto;
     padding: 0 0.5rem 2rem 0.5rem;
 }
 
-/* ITEMS */
 .item {
     margin-bottom: 2rem;
 }
