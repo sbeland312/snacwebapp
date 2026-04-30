@@ -29,7 +29,7 @@ header {
 
 .collection-blurb {
     max-width: 675px;
-    margin: 0 0 0.75rem 0;
+    margin: 0 auto 0.75rem auto;
     font-size: 0.95rem;
     line-height: 1.6;
     color: white;
