@@ -26,9 +26,9 @@ header {
 }
 
 header .collection-blurb {
-    max-width: 800px;
+    max-width: 650px;
     margin: 0.5rem 0 1rem 0;
-    font-size: 0.8rem !important;
+    font-size: 1.1rem !important;
     line-height: 1.5;
     color: white;
     text-align: left !important;
