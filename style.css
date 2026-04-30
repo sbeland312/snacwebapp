@@ -13,13 +13,6 @@
     box-sizing: border-box;
 }
 
-/* ONE shared layout system */
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
 /* HEADER */
 header {
     background-color: var(--dark);
@@ -28,13 +21,20 @@ header {
     margin-bottom: 2rem;
 }
 
+/* THIS IS THE KEY FIX — header and main now match exactly */
+.header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+}
+
 /* BLURB */
 .collection-blurb {
     font-size: 0.95rem;
     line-height: 1.6;
     color: white;
     text-align: left;
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.75rem 0;
 }
 
 /* TITLE */
@@ -69,9 +69,11 @@ a:hover {
     color: var(--highlight);
 }
 
-/* MAIN CONTENT */
+/* MAIN CONTENT — MUST MATCH HEADER WIDTH */
 main {
-    margin-bottom: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 0.5rem 2rem 0.5rem;
 }
 
 /* ITEMS */
