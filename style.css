@@ -25,7 +25,7 @@ header {
     padding: 1rem 0.5rem;
 }
 
-header .collection-blurb {
+.collection-blurb {
     max-width: 800px;
     margin: 1rem 0 1rem auto;
     font-size: 0.8rem;
