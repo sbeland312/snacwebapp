@@ -26,12 +26,12 @@ header {
 }
 
 .collection-blurb {
-    text-align: right;
     max-width: 800px;
-    margin: 1rem auto;
+    margin: 1rem 0 1rem auto;  /* KEY CHANGE */
     font-size: 1.4rem;
     line-height: 2;
     color: white;
+    text-align: right;
 }
 
 .translation {
