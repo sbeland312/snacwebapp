@@ -11,6 +11,7 @@ const input = document.getElementById('input');
 const welcomeMsg = document.getElementById('welcome-msg');
 const searchBtn = document.getElementById('search-btn');
 const refreshBtn = document.getElementById('refresh-btn');
+const blurb = document.querySelector('.collection-blurb');
 
 // ==========================
 // UI TRANSLATIONS
@@ -24,7 +25,8 @@ const translations = {
     languages: "Languages",
     countries: "Countries",
     scope: "Scope and Contents",
-    subjects: "Subjects in English"
+    subjects: "Subjects in English",
+    blurb: "This pilot collection presents a small sample of Latin American archival records within the SNAC Cooperative. SNAC is a collaborative project focused on improving access to historical materials through shared, community-informed archival description. Rather than treating records as isolated objects, SNAC emphasizes relationships between people, organizations, and the histories they are part of. This test environment supports ongoing work toward more inclusive description, including the development of a Spanish-speaking editorial subgroup."
   },
   es: {
     welcomeMsg: "Explorar la colección",
@@ -34,7 +36,8 @@ const translations = {
     languages: "Idiomas",
     countries: "Países",
     scope: "Alcance y Contenido",
-    subjects: "Materias en Español"
+    subjects: "Materias en Español",
+    blurb: "Esta colección piloto presenta una pequeña muestra de registros archivísticos latinoamericanos dentro de la Cooperativa SNAC. SNAC es un proyecto colaborativo enfocado en mejorar el acceso a materiales históricos mediante descripciones archivísticas compartidas e informadas por la comunidad. En lugar de tratar los registros como objetos aislados, SNAC enfatiza las relaciones entre personas, organizaciones y las historias de las que forman parte. Este entorno de prueba apoya el trabajo continuo hacia descripciones más inclusivas, incluyendo el desarrollo de un subgrupo editorial de habla hispana."
   }
 };
 
@@ -68,6 +71,10 @@ function translatePage(language) {
   welcomeMsg.textContent = translations[language].welcomeMsg;
   searchBtn.textContent = translations[language].searchBtn;
   refreshBtn.textContent = translations[language].refreshBtn;
+
+  if (blurb) {
+    blurb.textContent = translations[language].blurb;
+  }
 
   displayData(apiData);
 }
