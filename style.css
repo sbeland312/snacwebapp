@@ -27,7 +27,7 @@ header {
     padding: 1rem 0.5rem;
 }
 
-header .collection-blurb {
+.collection-blurb {
     font-size: 0.95rem;
     line-height: 1.6;
     color: white;
