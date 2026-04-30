@@ -48,6 +48,15 @@ h1 {
     margin: 1rem 0;
 }
 
+#input {
+    all: unset;
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: white;
+    padding: 0 8px;
+}
+
 .translation {
     display: flex;
     justify-content: center;
