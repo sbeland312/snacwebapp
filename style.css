@@ -67,6 +67,24 @@ a:hover {
     color: var(--highlight);
 }
 
+.search-bar {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#input, #search-btn, #refresh-btn {
+    height: 2.5rem;
+    padding: 0 0.5rem; 
+    border: none;
+    font-size: 1rem; 
+    border-radius: 5px;
+}
+
+#search-btn:hover, #refresh-btn:hover {
+    cursor: pointer;
+    background-color: var(--highlight);
+}
+
 main {
     max-width: 700px;
     margin: 0 auto;
