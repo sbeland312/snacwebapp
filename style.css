@@ -28,8 +28,8 @@ header {
 .translation {
     display: flex;
     gap: 20px;
-    justify-content: right;
-    margin-bottom: 1rem;
+    justify-content: center;   /* or flex-start or flex-end */
+    margin-top: 0.5rem;
 }
 
 h1 {
@@ -50,6 +50,7 @@ a:hover {
 
 .search-bar {
     margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 #input, #search-btn, #refresh-btn {
