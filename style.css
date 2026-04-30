@@ -25,9 +25,9 @@ header {
     padding: 1rem 0.5rem;
 }
 
-.collection-blurb {
+header .collection-blurb {
     max-width: 800px;
-    margin: 1rem 0 1rem auto;  /* KEY CHANGE */
+    margin: 1rem 0 1rem auto;
     font-size: 1.4rem;
     line-height: 2;
     color: white;
